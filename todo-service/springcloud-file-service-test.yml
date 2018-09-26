@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: springcloud-file-service
-  profiles:
-    active: test
