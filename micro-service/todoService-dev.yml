@@ -1,7 +1,7 @@
-spring:
-  application:
-    name: todoService
-  profiles:
-    active: dev
+#spring:
+#  application:
+#    name: todoService
+#  profiles:
+#    active: dev
 server:
   port: 8088
