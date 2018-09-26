@@ -1,5 +1,2 @@
-spring:
-  application:
-    name: userService
-  profiles:
-    active: test
+server:
+  port: 8082
