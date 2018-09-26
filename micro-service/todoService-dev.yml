@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: todoService
+  profiles:
+    active: dev
+server:
+  port: 8088
