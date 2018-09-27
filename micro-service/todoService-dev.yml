@@ -1,5 +1,6 @@
 server:
   port: 8088
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/todo_m
@@ -8,3 +9,16 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
+
+user-service:
+  ribbon:
+    listOfServers: localhost:8081
+
+zuul:
+  ignored-services: "*"
+  sensitive-headers:
+  routes:
+    user:
+      path: /users/**
+      serviceId: user-service
+      stripPrefix: false
