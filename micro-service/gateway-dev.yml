@@ -4,19 +4,20 @@ server:
 
 user-service:
   ribbon:
-    listOfServers: localhost:8081, localhost:8082
+    listOfServers: localhost:8002
 
 zuul:
   ignored-services: "*"
+  sensitive-headers:
   routes:
     user:
       path: /user/**
       serviceId: user-service
-      sensitive-headers:
+      stripPrefix: false
     session:
-      path: /sessions/**
-      url: http://localhost:8088/sessions
+      path: /login/**
+      serviceId: user-service
+      stripPrefix: false
     todos:
       path: /todos/**
       url: http://localhost:8088/todos
-      sensitive-headers:
