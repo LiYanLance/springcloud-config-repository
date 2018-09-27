@@ -11,7 +11,7 @@ zuul:
   sensitive-headers:
   routes:
     user:
-      path: /user/**
+      path: /users/**
       serviceId: user-service
       stripPrefix: false
     session:
