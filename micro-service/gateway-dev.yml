@@ -1,14 +1,22 @@
+server:
+  port: 8080
+  context-path: /api
+
+user-service:
+  ribbon:
+    listOfServers: localhost:8081, localhost:8082
+
 zuul:
   ignored-services: "*"
   routes:
     user:
-      path: /api/user/**
-      url: http://localhost:8082/user
+      path: /user/**
+      serviceId: user-service
       sensitive-headers:
     session:
-      path: /api/sessions/**
+      path: /sessions/**
       url: http://localhost:8088/sessions
     todos:
-      path: /api/todos/**
+      path: /todos/**
       url: http://localhost:8088/todos
       sensitive-headers:
