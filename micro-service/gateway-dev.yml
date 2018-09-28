@@ -2,9 +2,9 @@ server:
   port: 8080
   context-path: /api
 
-user-service:
-  ribbon:
-    listOfServers: localhost:8082
+#user-service:
+#  ribbon:
+#    listOfServers: localhost:8082
 
 zuul:
   ignored-services: "*"
