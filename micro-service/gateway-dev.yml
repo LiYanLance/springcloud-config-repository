@@ -22,6 +22,14 @@ zuul:
       path: /todos/**
       url: todoService
 
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckPath: /api/health
+
 hystrix:
   command:
     default:
