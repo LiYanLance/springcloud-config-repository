@@ -12,11 +12,11 @@ zuul:
   routes:
     user:
       path: /users/**
-      serviceId: user-service
+      serviceId: userService
       stripPrefix: false
     session:
       path: /login/**
-      serviceId: user-service
+      serviceId: userService
       stripPrefix: false
     todos:
       path: /todos/**
