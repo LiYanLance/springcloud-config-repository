@@ -20,4 +20,13 @@ zuul:
       stripPrefix: false
     todos:
       path: /todos/**
-      url: http://localhost:8088/todos
+      url: todoService
+
+
+hystrix:
+  command:
+    todoService:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000
