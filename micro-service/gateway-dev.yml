@@ -22,10 +22,9 @@ zuul:
       path: /todos/**
       url: todoService
 
-
 hystrix:
   command:
-    todoService:
+    default:
       execution:
         isolation:
           thread:
