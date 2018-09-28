@@ -20,8 +20,8 @@ zuul:
       stripPrefix: false
     todos:
       path: /todos/**
-      #url: todoService
       serviceId: todoService
+      stripPrefix: false
 
 spring:
   cloud:
