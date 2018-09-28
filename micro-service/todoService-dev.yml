@@ -20,5 +20,5 @@ zuul:
   routes:
     user:
       path: /users/**
-      serviceId: user-service
+      serviceId: userService
       stripPrefix: false
