@@ -12,7 +12,7 @@ spring:
 
 user-service:
   ribbon:
-    listOfServers: localhost:8081
+    listOfServers: localhost:8082
 
 zuul:
   ignored-services: "*"
