@@ -10,9 +10,9 @@ spring:
   jpa:
     show-sql: true
 
-user-service:
-  ribbon:
-    listOfServers: localhost:8082
+#user-service:
+ # ribbon:
+  #  listOfServers: localhost:8082
 
 zuul:
   ignored-services: "*"
