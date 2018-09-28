@@ -25,7 +25,7 @@ zuul:
 spring:
   cloud:
     consul:
-      host: localhost
+      host: consul
       port: 8500
       discovery:
         healthCheckPath: /api/health
