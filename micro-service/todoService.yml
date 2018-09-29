@@ -9,16 +9,6 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
-  cloud:
-    consul:
-      host: consul
-      port: 8500
-      discovery:
-        healthCheckPath: /health
-
-#user-service:
- # ribbon:
-  #  listOfServers: localhost:8082
 
 zuul:
   ignored-services: "*"
@@ -26,5 +16,9 @@ zuul:
   routes:
     user:
       path: /users/**
-      serviceId: userService
+      url: localhost:8082/users/
+      stripPrefix: false
+    login:
+      path: /login/**
+      url: localhost:8082/login/
       stripPrefix: false
