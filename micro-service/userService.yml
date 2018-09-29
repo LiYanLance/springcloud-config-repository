@@ -1,0 +1,7 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    username: root
+    password: 123swl
+    url: jdbc:mysql://localhost:3306/user_db?createDatabaseIfNotExist=true
