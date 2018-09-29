@@ -9,6 +9,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
+   
 
 zuul:
   ignored-services: "*"
@@ -22,3 +23,8 @@ zuul:
       path: /login/**
       url: localhost:8082/login/
       stripPrefix: false
+
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans:false
