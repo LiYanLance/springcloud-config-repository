@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  context-path: /api
+
+zuul:
+  ignored-services: "*"
+  sensitive-headers:
+  routes:
+    user:
+      path: /users/**
+      url: localhost:8082/users/
+      stripPrefix: false
+    session:
+      path: /login/**
+      url: localhost:8082/login/
+      stripPrefix: false
+    todos:
+      path: /todos/**
+      url: localhost:8088/todos/
+      stripPrefix: false
+
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 15000
+
+#user-service:
+#  ribbon:
+#    listOfServers: localhost:8082
+
+#spring:
+#  cloud:
+#    consul:
+#      host: consul
+#      port: 8500
+#      discovery:
+#        healthCheckPath: /api/health
