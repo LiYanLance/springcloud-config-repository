@@ -18,3 +18,7 @@ zuul:
       path: /todos/**
       url: http://todo-service:8088
       stripPrefix: false
+    tags:
+      path: /tags/**
+      url: http://todo-service:8088
+      stripPrefix: false
