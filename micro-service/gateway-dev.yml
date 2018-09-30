@@ -8,7 +8,7 @@ zuul:
   routes:
     user:
       path: /users/**
-      url: localhost:8082/users/
+      url: localhost:8082
       stripPrefix: false
     session:
       path: /login/**
