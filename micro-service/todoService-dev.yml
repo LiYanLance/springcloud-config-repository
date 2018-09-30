@@ -8,7 +8,9 @@ spring:
     password: 123swl
   jpa:
     show-sql: true
-   
+  jackson:
+    serialization:
+      fail-on-empty-beans:false
 
 zuul:
   ignored-services: "*"
@@ -18,8 +20,3 @@ zuul:
       path: /users/**
       url: http://localhost:8082
       stripPrefix: false
-
-spring:
-  jackson:
-    serialization:
-      fail-on-empty-beans:false
