@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  context-path: /api
+
+zuul:
+  ignored-services: "*"
+  sensitive-headers:
+  routes:
+    user:
+      path: /users/**
+      url: http://user-service:8082
+      stripPrefix: false
+    session:
+      path: /login/**
+      url: http://user-service:8082
+      stripPrefix: false
+    todos:
+      path: /todos/**
+      url: http://todo-service:8088
+      stripPrefix: false
