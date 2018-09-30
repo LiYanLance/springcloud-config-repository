@@ -3,8 +3,7 @@ server:
 
 spring:
   datasource:
-    #driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://mysql:3306/todo_m_db?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/todo_m_db?createDatabaseIfNotExist=true
     username: root
     password: 123swl
   jpa:
