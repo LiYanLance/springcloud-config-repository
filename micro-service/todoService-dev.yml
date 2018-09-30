@@ -17,11 +17,7 @@ zuul:
   routes:
     user:
       path: /users/**
-      url: localhost:8082/users/
-      stripPrefix: false
-    login:
-      path: /login/**
-      url: localhost:8082/login/
+      url: http://localhost:8082
       stripPrefix: false
 
 spring:
